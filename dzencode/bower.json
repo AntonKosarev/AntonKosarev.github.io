@@ -1,0 +1,21 @@
+{
+  "name": "dzencode",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Anton <rasto4itel@gmsil.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/AntonKosarev/dzencode",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+   "normalize.css": "*",
+   "jquery": "3.*"
+ }
+}
