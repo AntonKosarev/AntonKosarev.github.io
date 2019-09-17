@@ -18,6 +18,8 @@
     hideControlOnEnd: false,
     speed: 500,
     easing: null,
+    //высота
+    myViewportHeight: 0,
     slideMargin: 0,
     startSlide: 0,
     randomStart: false,
@@ -403,7 +405,11 @@
         height += parseFloat(slider.viewport.css('padding-top')) + parseFloat(slider.viewport.css('padding-bottom'));
       }
 
-      return height;
+      if (slider.settings.myViewportHeight == 0) {
+        return height;
+      } else {
+        return height = slider.settings.myViewportHeight;
+      }
     };
 
     /**

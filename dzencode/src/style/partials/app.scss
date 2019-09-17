@@ -479,18 +479,27 @@ h2 {
   }
 
   .comments {
-    .comments_wropper {
+    .invisible {      visibility: hidden;      }
+    .comments_wrapper {
       position: relative;
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-      width: 70%;
+      width: 1000px;
+      height: 270px;
       border-radius: 8px;
       margin: auto;
-      //slider_items        background-image: url("../img/sprites.png");
+
+      .bx-viewport {
+        height: 300px;
+      }
+
+
+
+      //slider_items
       .bx-controls-direction {
         .bx-rows,
         a {
           position: absolute;
-          top: 36%;
+          bottom: 10px;
           background-image: url("../img/sprites.png");
           background-repeat: no-repeat;
           height: 70px;
@@ -501,12 +510,12 @@ h2 {
         //sprites
         .bx-prev {
           background-position: -2px -3px;
-          left: -35px;
+          left: 250px;
         }
 
         .bx-next {
           background-position: -2px -76px;
-          right: -35px;
+          right: 415px;
         }
       }
 
@@ -543,13 +552,12 @@ h2 {
         }
       }
 
-      .item {
+      .trainer_item {
         position: relative;
-        overflow: visible;
 
         .comment {
           .comment_text {
-            overflow: visible;
+
 
             .foto {
               display: inline-block;
@@ -564,20 +572,27 @@ h2 {
           }
         }
 
-        .author {
-          position: absolute;
-          transform: translateX(-90%);
-          width: 250px;
-          z-index: 1;
-          bottom: -26px;
-          left: 40%;
+        .trainer {
+          position: relative;
+          border: 1px solid black;
+          height: 358px;
+          text-align: center;
+          .trainer_wrapper {
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            left: 310px;
+            padding: 10px 25px 0;
+            border: 1px solid;
+            .foto {display: inline-block;}
+            .sub {
+              vertical-align: top;
+              display: inline-block;
+              text-align: left;
+              p {
 
-          .foto {
-            float: left;
-          }
-
-          .sub {
-            // float: right;
+              }
+            }
           }
         }
       }

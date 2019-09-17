@@ -277,67 +277,78 @@ h2 {
       .content .offers .offer .button:hover {
         background-color: #5b6ceb;
         cursor: pointer; }
-  .content .comments .comments_wropper {
+  .content .comments .invisible {
+    visibility: hidden; }
+  .content .comments .comments_wrapper {
     position: relative;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    width: 70%;
+    width: 1000px;
+    height: 270px;
     border-radius: 8px;
     margin: auto; }
-    .content .comments .comments_wropper .bx-controls-direction .bx-rows,
-    .content .comments .comments_wropper .bx-controls-direction a {
+    .content .comments .comments_wrapper .bx-viewport {
+      height: 300px; }
+    .content .comments .comments_wrapper .bx-controls-direction .bx-rows,
+    .content .comments .comments_wrapper .bx-controls-direction a {
       position: absolute;
-      top: 36%;
+      bottom: 10px;
       background-image: url("../img/sprites.png");
       background-repeat: no-repeat;
       height: 70px;
       width: 70px;
       display: block; }
-    .content .comments .comments_wropper .bx-controls-direction .bx-prev {
+    .content .comments .comments_wrapper .bx-controls-direction .bx-prev {
       background-position: -2px -3px;
-      left: -35px; }
-    .content .comments .comments_wropper .bx-controls-direction .bx-next {
+      left: 250px; }
+    .content .comments .comments_wrapper .bx-controls-direction .bx-next {
       background-position: -2px -76px;
-      right: -35px; }
-    .content .comments .comments_wropper .bx-pager {
+      right: 415px; }
+    .content .comments .comments_wrapper .bx-pager {
       position: absolute;
       right: -45px;
       top: 0;
       height: 100%; }
-      .content .comments .comments_wropper .bx-pager .bx-pager-item {
+      .content .comments .comments_wrapper .bx-pager .bx-pager-item {
         transform: translateY(100%);
         margin: 10px 0; }
-      .content .comments .comments_wropper .bx-pager .bx-pager-link {
+      .content .comments .comments_wrapper .bx-pager .bx-pager-link {
         background-image: url("../img/sprites.png");
         background-repeat: no-repeat;
         height: 22px;
         width: 22px;
         display: block;
         background-position: -213px -167px; }
-      .content .comments .comments_wropper .bx-pager .bx-pager-link.active {
+      .content .comments .comments_wrapper .bx-pager .bx-pager-link.active {
         background-position: -213px -205px; }
-    .content .comments .comments_wropper .bx-pager {
+    .content .comments .comments_wrapper .bx-pager {
       display: absolute; }
-    .content .comments .comments_wropper .item {
-      position: relative;
-      overflow: visible; }
-      .content .comments .comments_wropper .item .comment .comment_text {
-        overflow: visible; }
-        .content .comments .comments_wropper .item .comment .comment_text .foto {
+    .content .comments .comments_wrapper .trainer_item {
+      position: relative; }
+      .content .comments .comments_wrapper .trainer_item .comment .comment_text .foto {
+        display: inline-block;
+        width: 30%; }
+      .content .comments .comments_wrapper .trainer_item .comment .comment_text .text {
+        display: inline-block;
+        width: 69%;
+        vertical-align: top; }
+      .content .comments .comments_wrapper .trainer_item .trainer {
+        position: relative;
+        border: 1px solid black;
+        height: 358px;
+        text-align: center; }
+        .content .comments .comments_wrapper .trainer_item .trainer .trainer_wrapper {
           display: inline-block;
-          width: 30%; }
-        .content .comments .comments_wropper .item .comment .comment_text .text {
-          display: inline-block;
-          width: 69%;
-          vertical-align: top; }
-      .content .comments .comments_wropper .item .author {
-        position: absolute;
-        transform: translateX(-90%);
-        width: 250px;
-        z-index: 1;
-        bottom: -26px;
-        left: 40%; }
-        .content .comments .comments_wropper .item .author .foto {
-          float: left; }
+          position: absolute;
+          bottom: 0;
+          left: 310px;
+          padding: 10px 25px 0;
+          border: 1px solid; }
+          .content .comments .comments_wrapper .trainer_item .trainer .trainer_wrapper .foto {
+            display: inline-block; }
+          .content .comments .comments_wrapper .trainer_item .trainer .trainer_wrapper .sub {
+            vertical-align: top;
+            display: inline-block;
+            text-align: left; }
 
 .footer {
   background-color: #5b6ceb; }
