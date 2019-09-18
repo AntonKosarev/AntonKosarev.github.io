@@ -1,2 +1,21 @@
+@font-face {
+  font-family: 'Freestyle-Script';
+  src: url("../fonts/Freestyle_Script/FREESCPT.ttf");
+  src: url("../fonts/Freestyle_Script/FreestyleScriptPlain.otf");
+}
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url("../fonts/Open_Sans/OpenSans-Bold.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans-SemiBold';
+  src: url("../fonts/Open_Sans/OpenSans-SemiBold.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf") format('truetype');
+}
 @import "../../bower_components/normalize.css/normalize.css";
 @import "partials/app";
+@import "partials/jquery.bxslider";
+@import "partials/slick";

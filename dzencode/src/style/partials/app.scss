@@ -13,13 +13,15 @@ $font_legend: 28px;
 $font_h2: 20px;
 $font_p: 16px;
 
+
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   text-decoration: none;
   color: black;
-  font-family: sans-serif;
+  font-family: 'OpenSans-Regular', sans-serif;
 }
 
 .clearfix:after {
@@ -30,10 +32,14 @@ $font_p: 16px;
 
 p {
   font-size: $font_p;
+  font-family: 'OpenSans-Regular', sans-serif;
+  font-family: 'Freestyle-Script' sans-serif;
+
 }
 
 h2 {
   font-size: $font_h2;
+  font-family: 'OpenSans-Bold', sans-serif;
 }
 
 .header {
@@ -165,6 +171,7 @@ h2 {
       p {
         color: $text_color_1;
         font-size: 26px;
+        font-family: 'Freestyle-Script' sans-serif;
       }
     }
 
@@ -479,21 +486,27 @@ h2 {
   }
 
   .comments {
-    .invisible {      visibility: hidden;      }
+    .invisible {
+      visibility: hidden;
+    }
+
     .comments_wrapper {
       position: relative;
-      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
       width: 1000px;
-      height: 270px;
+      height: 250px;
       border-radius: 8px;
       margin: auto;
+
+      .bx-wrapper {
+        box-shadow: none;
+        border: none;
+        background: none;
+      }
 
       .bx-viewport {
         height: 300px;
       }
-
-
-
       //slider_items
       .bx-controls-direction {
         .bx-rows,
@@ -518,14 +531,13 @@ h2 {
           right: 415px;
         }
       }
-
-      .bx-pager {
+      /*.bx-pager {
         position: absolute;
         right: -45px;
         top: 0;
         height: 100%;
 
-        .bx-pager-item {
+        ./*bx-pager-item {
           transform: translateY(100%);
           margin: 10px 0;
         }
@@ -542,55 +554,123 @@ h2 {
         .bx-pager-link.active {
           background-position: -213px -205px;
         }
-      }
-
-      .bx-pager {
-        display: absolute;
-
-        .bx-pager-item {
-          a {}
-        }
-      }
-
+      }*/
       .trainer_item {
         position: relative;
 
         .comment {
           .comment_text {
-
+            padding: 20px 20px 20px 0;
 
             .foto {
               display: inline-block;
-              width: 30%;
+              width: 20%;
             }
 
             .text {
               display: inline-block;
               width: 69%;
               vertical-align: top;
+              text-align: left;
+              margin-top:10px;
+               .sub {
+                margin-top: 20px;
+
+                span {
+                  color: $text_color_2;
+                }
+              }
+
+              &:before {
+                content: "";
+                display: block;
+                float: left;
+                background-image: url("../img/sprites.png");
+                background-repeat: no-repeat;
+                height: 150px;
+                width: 30px;
+                background-position: -10px -282px;
+                margin-right: 20px;
+              }
+
+              &:after {
+                content: "";
+                display: block;
+                float: right;
+                background-image: url("../img/sprites.png");
+                background-repeat: no-repeat;
+                height: 30px;
+                width: 30px;
+                background-position: -35px -260px;
+                margin-left: 20px;
+              }
             }
           }
         }
 
         .trainer {
           position: relative;
-          border: 1px solid black;
+          //border: 1px solid black;
           height: 358px;
           text-align: center;
+
+          .slick-list {
+            // box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            height: 193px;
+          }
+
+
           .trainer_wrapper {
             display: inline-block;
             position: absolute;
-            bottom: 0;
+            bottom: 118px;
             left: 310px;
             padding: 10px 25px 0;
-            border: 1px solid;
-            .foto {display: inline-block;}
+            //border: 1px solid;
+
+            .foto {
+              display: inline-block;
+            }
+
             .sub {
               vertical-align: top;
               display: inline-block;
               text-align: left;
+              margin: 13px 0 0 0;
               p {
+                font-family: 'OpenSans-Bold' sans-serif;
+                span {
+                  font-family: 'OpenSans-Regular', sans-serif;
+                }
+              }
+            }
+          }
 
+          .slick-dots {
+            position: absolute;
+            right: 0;
+            top: 10%;
+            height: 100%;
+
+            li {
+                  margin: 10px;
+              span {
+                background-image: url("../img/sprites.png");
+                background-repeat: no-repeat;
+                height: 22px;
+                width: 22px;
+                display: block;
+                background-position: -213px -167px;
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+
+            .slick-active {
+              span {
+                background-position: -213px -205px;
               }
             }
           }
@@ -605,6 +685,7 @@ h2 {
 
   .footer_wrapper {
     text-align: center;
+    padding: 70px 40px;
 
     p {
       color: $text_color_1;
@@ -614,16 +695,19 @@ h2 {
     h2 {
       color: $text_color_1;
       text-align: left;
+      margin-bottom: 35px;
     }
 
     .footer_left {
       display: inline-block;
-      width: 49%;
+      width: 40%;
       vertical-align: top;
+      margin-right: 20px;
 
       .social {
         text-align: left;
         height: 24px;
+        margin-top: 40px;
 
         a {
           background-image: url("../img/sprites.png");
@@ -659,20 +743,22 @@ h2 {
 
     .footer_right {
       display: inline-block;
-      width: 49%;
+      width: 55%;
       vertical-align: top;
 
       .contact {
-        .contact_item  {
+        .contact_item {
           display: inline-block;
-          width: 49%;
+          width: 45%;
           vertical-align: middle;
-
           text-align: left;
+          margin: 10px;
+
           p {
             line-height: 26px;
             vertical-align: middle;
           }
+
           &:before {
             content: "";
             display: block;
@@ -718,7 +804,8 @@ h2 {
 
     p {
       color: $text_color_1;
-      margin: 14px 0;
+      // margin: 14px 0;
+      padding: 14px 0;
     }
   }
 }
