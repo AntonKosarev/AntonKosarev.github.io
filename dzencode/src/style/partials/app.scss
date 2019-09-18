@@ -13,8 +13,6 @@ $font_legend: 28px;
 $font_h2: 20px;
 $font_p: 16px;
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -33,8 +31,6 @@ $font_p: 16px;
 p {
   font-size: $font_p;
   font-family: 'OpenSans-Regular', sans-serif;
-  font-family: 'Freestyle-Script' sans-serif;
-
 }
 
 h2 {
@@ -128,8 +124,12 @@ h2 {
         padding: 30px;
         border-radius: 20px;
 
+        .form-group {
+          margin: 14px 5px;
+        }
+
         .text {
-          margin: 8px 5px;
+          // margin: 8px 5px;
           padding: 13px 8px;
           color: $text_color_3;
           border: none;
@@ -170,8 +170,9 @@ h2 {
 
       p {
         color: $text_color_1;
-        font-size: 26px;
-        font-family: 'Freestyle-Script' sans-serif;
+        font-family: 'Freestyle-script', sans-serif;
+        font-size: 48px;
+        margin-top: 25px;
       }
     }
 
@@ -194,7 +195,11 @@ h2 {
 
       p {
         color: $text_color_2;
-        font-size: $font_p;
+        font-size: 28px;
+        font-family: 'Freestyle-script', sans-serif;
+        // font-size: 48px;
+        margin-top: 6px;
+        text-transform: none;
       }
     }
 
@@ -270,7 +275,7 @@ h2 {
 
     .about_us_text {
       display: inline-block;
-      width: 35%;
+      width: 570px;
       padding-right: 50px;
       vertical-align: top;
       text-align: left;
@@ -572,8 +577,9 @@ h2 {
               width: 69%;
               vertical-align: top;
               text-align: left;
-              margin-top:10px;
-               .sub {
+              margin-top: 10px;
+
+              .sub {
                 margin-top: 20px;
 
                 span {
@@ -619,7 +625,6 @@ h2 {
             height: 193px;
           }
 
-
           .trainer_wrapper {
             display: inline-block;
             position: absolute;
@@ -627,7 +632,6 @@ h2 {
             left: 310px;
             padding: 10px 25px 0;
             //border: 1px solid;
-
             .foto {
               display: inline-block;
             }
@@ -636,9 +640,11 @@ h2 {
               vertical-align: top;
               display: inline-block;
               text-align: left;
-              margin: 13px 0 0 0;
+              margin: 13px 0 0;
+
               p {
                 font-family: 'OpenSans-Bold' sans-serif;
+
                 span {
                   font-family: 'OpenSans-Regular', sans-serif;
                 }
@@ -653,7 +659,8 @@ h2 {
             height: 100%;
 
             li {
-                  margin: 10px;
+              margin: 10px;
+
               span {
                 background-image: url("../img/sprites.png");
                 background-repeat: no-repeat;

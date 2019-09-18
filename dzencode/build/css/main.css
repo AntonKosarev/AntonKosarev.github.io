@@ -31,8 +31,7 @@
 
 p {
   font-size: 16px;
-  font-family: 'OpenSans-Regular', sans-serif;
-  font-family: 'Freestyle-Script' sans-serif; }
+  font-family: 'OpenSans-Regular', sans-serif; }
 
 h2 {
   font-size: 20px;
@@ -92,8 +91,9 @@ h2 {
         background-color: #fff;
         padding: 30px;
         border-radius: 20px; }
+        .content .form .form-wrapper .form_try-it .form-group {
+          margin: 14px 5px; }
         .content .form .form-wrapper .form_try-it .text {
-          margin: 8px 5px;
           padding: 13px 8px;
           color: #969696;
           border: none;
@@ -123,8 +123,9 @@ h2 {
         text-transform: uppercase; }
       .content .form .slogan p {
         color: #fff;
-        font-size: 26px;
-        font-family: 'Freestyle-Script' sans-serif; }
+        font-family: 'Freestyle-script', sans-serif;
+        font-size: 48px;
+        margin-top: 25px; }
     .content .form .icons {
       background: url("../img/bg_iconsblock.jpg") #5363db 100% 100% no-repeat;
       min-height: 800px; }
@@ -137,7 +138,10 @@ h2 {
       text-transform: uppercase; }
     .content .product .product_head p {
       color: #5363db;
-      font-size: 16px; }
+      font-size: 28px;
+      font-family: 'Freestyle-script', sans-serif;
+      margin-top: 6px;
+      text-transform: none; }
   .content .product .product_classes {
     text-align: center; }
     .content .product .product_classes li {
@@ -179,7 +183,7 @@ h2 {
     text-align: center; }
     .content .about_us .about_us_text {
       display: inline-block;
-      width: 35%;
+      width: 570px;
       padding-right: 50px;
       vertical-align: top;
       text-align: left; }
@@ -407,7 +411,7 @@ h2 {
             vertical-align: top;
             display: inline-block;
             text-align: left;
-            margin: 13px 0 0 0; }
+            margin: 13px 0 0; }
             .content .comments .comments_wrapper .trainer_item .trainer .trainer_wrapper .sub p {
               font-family: 'OpenSans-Bold' sans-serif; }
               .content .comments .comments_wrapper .trainer_item .trainer .trainer_wrapper .sub p span {
@@ -539,9 +543,11 @@ ul.bxslider {
 ===================================*/
 .bx-wrapper,
 .bx-wrapper_inner {
+  /* -moz-box-shadow: 0 0 5px #ccc;
+  -webkit-box-shadow: 0 0 5px #ccc;
   box-shadow: 0 0 5px #ccc;
   border: 5px solid #fff;
-  background: #fff; }
+  background: #fff; */ }
 
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto,

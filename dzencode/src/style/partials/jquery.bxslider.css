@@ -31,11 +31,11 @@ ul.bxslider {
 ===================================*/
 .bx-wrapper,
 .bx-wrapper_inner {
-  -moz-box-shadow: 0 0 5px #ccc;
+  /* -moz-box-shadow: 0 0 5px #ccc;
   -webkit-box-shadow: 0 0 5px #ccc;
   box-shadow: 0 0 5px #ccc;
   border: 5px solid #fff;
-  background: #fff;
+  background: #fff; */
 }
 .bx-wrapper .bx-pager,
 .bx-wrapper .bx-controls-auto,
