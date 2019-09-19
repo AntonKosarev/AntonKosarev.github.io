@@ -15306,7 +15306,7 @@ $(document).ready(function() {
     dots: true,
     infinite: true,
     speed: 500,
-    cssEase: 'linear',
+    // cssEase: 'linear',
     arrows: false,
     customPaging: function(slider, i) {
       return $('<span></span>');
@@ -15314,6 +15314,7 @@ $(document).ready(function() {
     },
     vertical: true,
     verticalSwiping: true,
+    // easing: 'ease',
   };
   $('.comment_slider').slick(slic_slider);
 

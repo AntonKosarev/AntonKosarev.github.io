@@ -20,6 +20,7 @@ $font_p: 16px;
   text-decoration: none;
   color: black;
   font-family: 'OpenSans-Regular', sans-serif;
+  z-index: 10;
 }
 
 .clearfix:after {
@@ -37,14 +38,22 @@ h2 {
   font-size: $font_h2;
   font-family: 'OpenSans-Bold', sans-serif;
 }
+.wrapper {
+  position: relative;
+  background: url(../img/bg_lotus.png) bottom 350px right no-repeat;
+}
 
 .header {
   text-align: center;
-  margin: 14px 0;
+  padding: 14px 0;
+  background-color: #fff;
+  position: fixed;
+      top: 0;
+      width: 100%;
+      min-height: 100px;
+      z-index: 99;
 
   .logo {
-    // width: 70px
-    // margin: auto;
     display: inline-block;
   }
 
@@ -63,7 +72,6 @@ h2 {
 
     ul {
       display: inline-block;
-      // text-align: center;
       li {
         display: inline-block;
 
@@ -99,6 +107,7 @@ h2 {
   .form {
     background: url("../img/bg.jpg") $background_color 100% 100% no-repeat;
     min-height: 598px;
+    margin-top: 107px;
     position: relative;
 
     .form-wrapper {
@@ -121,7 +130,7 @@ h2 {
         display: inline-block;
         background-color: $bg_default;
         //visulal
-        padding: 30px;
+        padding: 35px 30px;
         border-radius: 20px;
 
         .form-group {
@@ -129,7 +138,7 @@ h2 {
         }
 
         .text {
-          // margin: 8px 5px;
+          min-width: 230px;
           padding: 13px 8px;
           color: $text_color_3;
           border: none;
@@ -144,7 +153,7 @@ h2 {
           border-radius: 15px;
           text-align: center;
           color: $text_color_1;
-          width: 125px;
+          width: 170px;
           float: right;
         }
 
@@ -164,14 +173,14 @@ h2 {
 
       h2 {
         color: $text_color_1;
-        font-size: 45px;
+        font-size: 48px;
         text-transform: uppercase;
       }
 
       p {
         color: $text_color_1;
         font-family: 'Freestyle-script', sans-serif;
-        font-size: 48px;
+        font-size: 40px;
         margin-top: 25px;
       }
     }
@@ -185,7 +194,7 @@ h2 {
   .product {
     .product_head {
       text-align: center;
-      margin: 14px 0;
+      margin: 65px 0 25px 0;
 
       h2 {
         color: $text_color_2;
@@ -197,14 +206,12 @@ h2 {
         color: $text_color_2;
         font-size: 28px;
         font-family: 'Freestyle-script', sans-serif;
-        // font-size: 48px;
         margin-top: 6px;
         text-transform: none;
       }
     }
 
-    .product_classes {
-      // display: inline-block;
+    .product_classes {;
       text-align: center;
 
       li {
@@ -275,7 +282,7 @@ h2 {
 
     .about_us_text {
       display: inline-block;
-      width: 570px;
+      width: auto;
       padding-right: 50px;
       vertical-align: top;
       text-align: left;
@@ -284,10 +291,13 @@ h2 {
         color: $text_color_2;
         text-transform: uppercase;
         margin: 14px;
+        font-size: 30px;
       }
 
       p {
         margin: 10px 14px;
+        font-size: 41px;
+        color: #777777;
       }
     }
 
@@ -306,7 +316,6 @@ h2 {
           height: 70px;
           width: 70px;
           display: block;
-          // margin-right: 10px;
         }
         //sprites
         .bx-prev {
@@ -427,6 +436,7 @@ h2 {
 
     .offer {
       display: inline-block;
+      background-color: white;
       box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
@@ -439,6 +449,12 @@ h2 {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         padding: 15px;
+        &:hover {
+          p {
+            text-shadow: 0px 1px 2px black, 0 0 1em white;
+            cursor: pointer;
+          }
+        }
 
         p {
           color: $text_color_1;
@@ -491,6 +507,7 @@ h2 {
   }
 
   .comments {
+        margin: 70px 0;
     .invisible {
       visibility: hidden;
     }
@@ -523,7 +540,6 @@ h2 {
           height: 70px;
           width: 70px;
           display: block;
-          // margin-right: 10px;
         }
         //sprites
         .bx-prev {
@@ -536,36 +552,18 @@ h2 {
           right: 415px;
         }
       }
-      /*.bx-pager {
-        position: absolute;
-        right: -45px;
-        top: 0;
-        height: 100%;
-
-        ./*bx-pager-item {
-          transform: translateY(100%);
-          margin: 10px 0;
-        }
-
-        .bx-pager-link {
-          background-image: url("../img/sprites.png");
-          background-repeat: no-repeat;
-          height: 22px;
-          width: 22px;
-          display: block;
-          background-position: -213px -167px;
-        }
-
-        .bx-pager-link.active {
-          background-position: -213px -205px;
-        }
-      }*/
       .trainer_item {
         position: relative;
 
         .comment {
           .comment_text {
-            padding: 20px 20px 20px 0;
+            margin: 10px 50px 10px 7px;
+                background-color: white;
+                border-radius: 7px;
+                padding: 13px 0 13px 0;
+                box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.25);
+                overflow: hidden;
+
 
             .foto {
               display: inline-block;
@@ -616,12 +614,9 @@ h2 {
 
         .trainer {
           position: relative;
-          //border: 1px solid black;
           height: 358px;
           text-align: center;
-
           .slick-list {
-            // box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
             height: 193px;
           }
 
@@ -631,27 +626,31 @@ h2 {
             bottom: 118px;
             left: 310px;
             padding: 10px 25px 0;
-            //border: 1px solid;
             .foto {
               display: inline-block;
+              img {
+                z-index: 99999990;
+              }
             }
 
             .sub {
               vertical-align: top;
               display: inline-block;
               text-align: left;
-              margin: 13px 0 0;
+              margin: 10px 0 0;
 
               p {
-                font-family: 'OpenSans-Bold' sans-serif;
+                font-family: 'OpenSans-Bold', sans-serif;
+                line-height: 23px;
+                font-weight: 600;
 
                 span {
                   font-family: 'OpenSans-Regular', sans-serif;
+                  font-weight: 200;
                 }
               }
             }
           }
-
           .slick-dots {
             position: absolute;
             right: 0;
@@ -660,7 +659,6 @@ h2 {
 
             li {
               margin: 10px;
-
               span {
                 background-image: url("../img/sprites.png");
                 background-repeat: no-repeat;
@@ -668,13 +666,11 @@ h2 {
                 width: 22px;
                 display: block;
                 background-position: -213px -167px;
-
                 &:hover {
                   cursor: pointer;
                 }
               }
             }
-
             .slick-active {
               span {
                 background-position: -213px -205px;
@@ -686,7 +682,6 @@ h2 {
     }
   }
 }
-
 .footer {
   background-color: $button_hover_color;
 
@@ -810,9 +805,8 @@ h2 {
     text-align: center;
 
     p {
-      color: $text_color_1;
-      // margin: 14px 0;
-      padding: 14px 0;
+      color: #b7bffc;
+      padding: 30px 0;
     }
   }
 }

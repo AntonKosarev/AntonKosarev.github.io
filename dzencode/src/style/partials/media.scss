@@ -1,0 +1,246 @@
+@media all and (max-width: 1069px) {
+  .content {
+    .icons {
+      .icon {
+        li:nth-child(even) {
+          &:after {
+            content: "";
+            display: block;
+          }
+        }
+      }
+    }
+
+    .form {
+      background: url("../img/bg.jpg") #5363db top 0 left 50% no-repeat;
+
+      .form-wrapper {
+        position: relative;
+        top: 0;
+        transform: none;
+        padding-top: 20px;
+
+        .form_try-it {
+          display: block;
+          max-width: 300px;
+          margin: auto;
+          padding: 15px;
+        }
+
+        .slogan {
+          h2 {
+            font-size: 38px;
+          }
+
+          p {
+            font-size: 38px;
+          }
+        }
+      }
+    }
+
+    .icons {
+      background: url("../img/bg_iconsblock.jpg") #5363db top 0 left 70% no-repeat;
+
+      ul {
+        position: relative;
+        top: 0;
+        transform: none;
+      }
+    }
+
+    .offers {
+      .offer {
+        display: block;
+        margin: 35px auto;
+        max-width: 270px;
+      }
+    }
+
+    .comments {
+      .comments_wrapper {
+        width: 700px;
+        height: 250px;
+        border-radius: 8px;
+        margin: auto;
+
+        .bx-wrapper {
+          .bx-controls-direction {
+            a {
+              top: 55%;
+
+              img {}
+            }
+
+            .bx-prev {
+              left: 250px;
+            }
+
+            .bx-next {
+              right: 130px;
+            }
+          }
+        }
+
+        .trainer_item {
+          .trainer {
+            .trainer_wrapper {
+              bottom: 93px;
+              z-index: 100000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 768px) {
+  .header {
+    padding: 0;
+
+    .logo {
+      display: none;
+    }
+
+    .menu {
+      min-width: 100px;
+      margin: 10px 0;
+
+      ul {
+        li {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .content {
+    .icons {
+      background-size: 330% 100%;
+    }
+
+    .comments {
+      margin: 145px 0;
+
+      .comments_wrapper {
+        width: 300px;
+        height: 350px;
+        border-radius: 8px;
+        margin: auto;
+
+        .bx-wrapper {
+          .bx-controls-direction {
+            a {
+              top: 85%;
+
+              img {}
+            }
+
+            .bx-prev {
+              left: -25px;
+            }
+
+            .bx-next {
+              right: 25px;
+            }
+          }
+        }
+
+        .trainer_item {
+          .trainer {
+            .trainer_wrapper {
+              left: 30px;
+              bottom: -3px;
+              z-index: 100000;
+            }
+
+            .comment {
+              .comment_text {
+                .text {
+                  margin: 0 0 35px;
+
+                  p {
+                    font-size: 14px;
+                  }
+
+                  .sub {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media all and (max-width: 539px) {
+  .content {
+    .icons {
+      background-size: 1000% 100%;
+    }
+    .about_us {
+      .about_us_text {
+        p {
+          margin: 5px 7px;
+          font-size: 20px;
+        }
+      }
+    }
+    .comments {
+      margin: 145px 0;
+      .comments_wrapper {
+        width: 300px;
+        margin: auto;
+        .bx-wrapper {
+          .bx-controls-direction {
+            a {
+              top: 85%;
+            }
+            .bx-prev {
+              left: -25px;
+            }
+            .bx-next {
+              right: 25px;
+            }
+          }
+        }
+        .trainer_item {
+          .trainer {
+            .trainer_wrapper {
+              left: 40px;
+              bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    .footer_wrapper {
+      padding: 70px 40px;
+      p {
+        text-align: left;
+      }
+      h2 {
+        text-align: left;
+        margin-bottom: 35px;
+      }
+      .footer_left {
+        width: 90%;
+      }
+      .footer_right {
+        width: 90%;
+        h2 {
+          margin-top: 40px;
+        }
+        .contact {
+          .contact_item {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}

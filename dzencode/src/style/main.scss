@@ -16,6 +16,9 @@
   src: url("../fonts/Open_Sans/OpenSans-Regular.ttf") format('truetype');
 }
 @import "../../bower_components/normalize.css/normalize.css";
-@import "partials/app";
+
 @import "partials/jquery.bxslider";
 @import "partials/slick";
+
+@import "partials/app";
+@import "partials/media";
