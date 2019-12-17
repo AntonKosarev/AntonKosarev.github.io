@@ -1,0 +1,104 @@
+.container {
+    font-size: 10px;
+}
+
+header, footer, div, ul, li {
+    /*margin: 1em;*/
+    /*padding: 1em;*/
+    /*border: 0.1em solid #2e6ab1;*/
+    /*position: relative;*/
+}
+.block-text {
+    margin-top: 1em;
+    margin-bottom: 5em;
+}
+.block-text h1,
+.block-text h2,
+.block-text h3,
+.block-text p {
+     margin-top: 1em;
+     margin-bottom: 1em;
+ }
+@supports (display: flex) or (display: -webkit-box) {
+    .block-row {
+        position: relative;
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+        /*.ms-flex-justify-content(center);*/
+
+        align-items: center;
+        -webkit-align-content: center;
+        -webkit-align-items: center;
+
+    }
+
+}
+
+.vertical-bottom {
+    position: relative;
+    bottom: 0;
+}
+.vertical-center {
+    display: flex;
+    align-items: center;
+    /*position: relative;
+    top: 50%;
+    transform: translateY(-50%); */
+}
+.icon-before {
+    margin-left: 50px;
+}
+.icon-before:before {
+    content: "";
+    float: left;
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/sprites.png");
+    background-position: -60px 0;
+    background-repeat: no-repeat;
+    margin-left: -60px;
+}
+
+.block-img img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.w-0 {width: 0;   /*margin-left: 0; margin-right: 0;*/}
+.w-1 {width: 8%;  /*margin-left: 0.5%; margin-right: 0.5%;*/}
+.w-2 {width: 18%; /*margin-left: 0.5%; margin-right: 0.5%;*/}
+.w-3 {width: 28%; /*margin-left: 0.5%; margin-right: 0.5%;*/}
+.w-4 {width: 38%; /*margin-left: 0.5%; margin-right: 0.5%;*/}
+.w-5 {width: 48%; /*margin-left: 0.5%; margin-right: 0.5%;*/}
+.w-6 {width: 58%; /*margin-left: 0.5%; margin-right: 0.5%;*/}
+.w-7 {width: 68%; /*margin-left: 0.5%; margin-right: 0.5%;*/}
+.w-8 {width: 78%; /*margin-left: 0.5%; margin-right: 0.5%;*/}
+.w-9 {width: 88%; /*margin-left: 0.5%; margin-right: 0.5%;*/}
+
+
+.block-button a {
+    display: inline-block;
+    padding: 1.3em 4.5em;
+    box-shadow: 0 0.5em 1.3em rgba(0, 0, 0, 0.2);
+    background-color: #6aaa2f;
+    font-size: 1.75em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.block-button a:hover {
+    background-color: #538d29;
+}

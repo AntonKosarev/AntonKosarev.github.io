@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+}
+ul {
+    list-style: none;
+}
+figure {
+    display: block;
+}
