@@ -1,14 +1,8 @@
-Настройка Apache 2.4.41-win64-VS16 под Windows 10
-Подготовка папок
-Настройка Apache
-Настройка PHP
-Настройка MySQL
-Устанавливаем phpMyAdmin
-
-2)Настройка Apache
-Настройка виртуальных хостов.
-1) Необходимо убедиться что подключён (раскоментирован) модуль mod_rewrite.so в ..\Apache24\conf\httpd.php
-2) Настройка виртуального хоста в ..\Apache24\conf\extra\httpd-vhosts.conf
+РќР°СЃС‚СЂРѕР№РєР° Apache 2.4.41-win64-VS16 РїРѕРґ Windows 10
+Configure Apache
+Configuring virtual hosts.
+1) Make sure that the module is connected mod_rewrite.so РІ ..\Apache24\conf\httpd.php
+2) Virtual host setup settings ..\Apache24\conf\extra\httpd-vhosts.conf
 <VirtualHost *:80>
 	ServerName test.loc
 	DocumentRoot "C:/localhost/test-web-development"
@@ -23,12 +17,11 @@
 	</Directory>
 </VirtualHost>
 
-3) Если не удаётся настроить переадресацию на index.php при обращении к серверу с параметрами через слеш,
- можно проверить работу сервера указав абсолютную переадресацию в httpd-vhosts.conf
- НАПРИМЕР:
+3) Р•СЃР»u cannot configure redirection to index.php when accessing the server with parameters through "/",
+    you can check the operation of the server by indicating absolute redirection in httpd-vhosts.conf
+
+ РќРђРџР РРњР•Р :
 	#RewriteEngine on
 	RewriteEngine https://google.com
 
-4) Для полной кртины приложены файлы с настройками
-	
 
