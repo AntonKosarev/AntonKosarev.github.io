@@ -1,0 +1,12 @@
+html {
+    font-size: 1px;
+}
+
+canvas {
+    background: #eee;
+    display: block;
+    margin: 0 auto;
+}
+#bang {
+    visibility: hidden;
+}

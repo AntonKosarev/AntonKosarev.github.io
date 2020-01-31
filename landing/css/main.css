@@ -3,10 +3,10 @@
 }
 
 header, footer, div, ul, li {
-    /*margin: 1em;*/
-    /*padding: 1em;*/
-    /*border: 0.1em solid #2e6ab1;*/
-    /*position: relative;*/
+    margin: 1em;
+    padding: 1em;
+    border: 0.1em solid #2e6ab1;
+    position: relative;
 }
 .block-text {
     margin-top: 1em;
