@@ -58,8 +58,8 @@ let blockBreaker = {
         position: {
             x: canvas.width / 2,
             y: canvas.height - 30,
-            dx: 2,
-            dy: -2,
+            dx: 4,
+            dy: -4,
             isPastAPaddle: false,
         },
         spin: 0,
@@ -80,13 +80,13 @@ let blockBreaker = {
             //rebound from the bottom
             if ((this.position.y + this.radius) >= canvas.height - blockBreaker.paddle.height && (this.position.y + this.radius) < canvas.height) {
                 // if ball rebound from the paddle
-                if ((this.position.x - this.radius) >= blockBreaker.paddle.position.x && (this.position.x - this.radius) < (blockBreaker.paddle.position.x + blockBreaker.paddle.width)) {
+                if ((this.position.x + this.radius) >= blockBreaker.paddle.position.x && (this.position.x - this.radius) < (blockBreaker.paddle.position.x + blockBreaker.paddle.width)) {
                     blockBreaker.ball.spin = blockBreaker.ball.spin + blockBreaker.eventCallbacks.paddleSpeed.speed;
-                    if (blockBreaker.ball.spin > 3) {
-                        blockBreaker.ball.spin = 3;
+                    if (blockBreaker.ball.spin > 2) {
+                        blockBreaker.ball.spin = 2;
                     }
-                    if (blockBreaker.ball.spin < -4) {
-                        blockBreaker.ball.spin = -4;
+                    if (blockBreaker.ball.spin < -2) {
+                        blockBreaker.ball.spin = -2;
                     }
                     this.position.dy = -this.position.dy;
                     // }
@@ -103,8 +103,15 @@ let blockBreaker = {
                 this.position.dy = -this.position.dy;
             }
             //rebound from the left and right walls
-            if ((this.position.x + this.radius) >= (canvas.width) || (this.position.x - this.radius) <= 0) {
-                this.position.dx = -this.position.dx;
+            if ((this.position.x + this.radius) >= (canvas.width)) {
+                if (this.position.dx > 0) {
+                    this.position.dx = -this.position.dx;
+                }
+            } else if ((this.position.x - this.radius) <= 0) {
+                if (this.position.dx < 0) {
+                    this.position.dx = -this.position.dx;
+                }
+                console.log('rebound from the left and right walls: ', this);
             }
             // rebound from the bricks and change broken value of the brick
             for (let column = 0; column < blockBreaker.wall.columns; column++) {
@@ -134,11 +141,6 @@ let blockBreaker = {
                             right = false;
                             rebound.to.dx = -1;
                         }
-                        if ((y > y1 && y < y2)) {
-                            rebound.from = 'right, left';
-                            rebound.to.dx = -1;
-                            rebound.to.dy = 1;
-                        }
                         rebound.catched = (top && bottom && left && right);
                         return rebound;
                     }
@@ -156,6 +158,7 @@ let blockBreaker = {
                     if (ballCatchedInBrick.catched && brick.broken === false) {
                         this.position.dx = ballCatchedInBrick.to.dx * this.position.dx;
                         this.position.dy = ballCatchedInBrick.to.dy * this.position.dy;
+                        console.log('ballCatchedInBrick.catcheds: ', this);
                         //parameter for bang
                         blockBreaker.wall.collection[column][row].broken = 'catch';
                     }
@@ -164,7 +167,7 @@ let blockBreaker = {
             // change ball position every request
             this.position.x = this.position.x + this.position.dx - 0.1 * blockBreaker.ball.spin;
             this.position.y = this.position.y + this.position.dy;
-            this.corner = this.corner - blockBreaker.ball.spin * 0.1;
+            this.corner = this.corner - blockBreaker.ball.spin * 0.05;
         },
     },
 
@@ -212,11 +215,11 @@ let blockBreaker = {
                             bang.happened = true;
                         }
                         // }
-                    }, 25);
+                    }, 35);
                     setTimeout(function () {
                         clearInterval(this.animation);
                         return;
-                    }, 700);
+                    }, 875);
                 },
             };
             this.drawBrick = function () {
@@ -352,7 +355,6 @@ let blockBreaker = {
                 if (!blockBreaker.isPaused) {
                     blockBreaker.animate();
                 }
-                blockBreaker.animate();
             }
         },
 
@@ -461,7 +463,10 @@ let blockBreaker = {
         // all bricks brocken
         if (blockBreaker.score.value === blockBreaker.wall.rows * blockBreaker.wall.columns) {
             blockBreaker.isStopped = true;
+            cancelAnimationFrame(blockBreaker.streamId);
+            document.removeEventListener('mousedown', blockBreaker.eventCallbacks.mouseDownHandler);
             alert("YOU WIN, CONGRATULATIONS!");
+            // document.location.reload();
         }
         if (!blockBreaker.isPaused) {
             if (!blockBreaker.isStopped) {
