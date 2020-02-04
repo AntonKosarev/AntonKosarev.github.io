@@ -156,7 +156,7 @@ let blockBreaker = {
 
 
                     // check intersection.js
-                    let lr = false;
+                    let lr;
                     if (brick.broken === false) {
                         let rectangle = {
                             a: {x: brick.position.brick.a.x, y: brick.position.brick.a.y},
@@ -176,6 +176,7 @@ let blockBreaker = {
                         if (lr) {
                             this.position.dx = -this.position.dx;
                             this.position.dy = this.position.dy;
+                            lr = false;
                         } else {
                             this.position.dx = ballCatchedInBrick.to.dx * this.position.dx;
                             this.position.dy = ballCatchedInBrick.to.dy * this.position.dy;
