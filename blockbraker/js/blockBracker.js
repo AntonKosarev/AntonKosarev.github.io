@@ -111,7 +111,6 @@ let blockBreaker = {
                 if (this.position.dx < 0) {
                     this.position.dx = -this.position.dx;
                 }
-                console.log('rebound from the left and right walls: ', this);
             }
             // rebound from the bricks and change broken value of the brick
             for (let column = 0; column < blockBreaker.wall.columns; column++) {
@@ -155,15 +154,44 @@ let blockBreaker = {
                         this.radius
                     );
 
+
+                    // check intersection.js
+                    let lr = false;
+                    if (brick.broken === false) {
+                        let rectangle = {
+                            a: {x: brick.position.brick.a.x, y: brick.position.brick.a.y},
+                            b: {x: brick.position.brick.b.x, y: brick.position.brick.b.y},
+                            c: {x: brick.position.brick.c.x, y: brick.position.brick.c.y},
+                            d: {x: brick.position.brick.d.x, y: brick.position.brick.d.y}
+                        };
+                        let circle = {x: this.position.x, y: this.position.y, r: this.radius};
+                        let collision = bounceTheBallFromTheBrick(rectangle, circle);
+
+                        if (collision.left) {
+                            console.log('collision.left: ', collision.left);
+                            lr = true;
+                        }
+                        if (collision.right) {
+                            console.log('collision.right: ', collision.right);
+                            lr = true;
+                        }
+                    }
+
                     if (ballCatchedInBrick.catched && brick.broken === false) {
-                        this.position.dx = ballCatchedInBrick.to.dx * this.position.dx;
-                        this.position.dy = ballCatchedInBrick.to.dy * this.position.dy;
-                        console.log('ballCatchedInBrick.catcheds: ', this);
+                        if (lr) {
+                            this.position.dx = -this.position.dx;
+                            this.position.dy = this.position.dy;
+                        } else {
+                            this.position.dx = ballCatchedInBrick.to.dx * this.position.dx;
+                            this.position.dy = ballCatchedInBrick.to.dy * this.position.dy;
+                        }
                         //parameter for bang
                         blockBreaker.wall.collection[column][row].broken = 'catch';
                     }
                 }
             }
+
+
             // change ball position every request
             this.position.x = this.position.x + this.position.dx - 0.1 * blockBreaker.ball.spin;
             this.position.y = this.position.y + this.position.dy;
@@ -179,6 +207,12 @@ let blockBreaker = {
             this.position = {
                 x: 0,//define in draw
                 y: 0,//define in draw
+                brick: {
+                    a: {x: 0, y: 0},
+                    b: {x: 0, y: 0},
+                    c: {x: 0, y: 0},
+                    d: {x: 0, y: 0},
+                },
             };
             this.broken = false;
             this.bang = {
@@ -191,6 +225,7 @@ let blockBreaker = {
                         y: 0,
                         width: 130,
                         height: 130,
+
                     },
                     onCanvas: {
                         x: 0,//define in draw
@@ -287,6 +322,18 @@ let blockBreaker = {
                     collection[column][row].position.y = y + row * dy;
                     collection[column][row].bang.position.onCanvas.x = collection[column][row].position.x + 8;
                     collection[column][row].bang.position.onCanvas.y = collection[column][row].position.y - 24;
+
+                    collection[column][row].position.brick.a.x = collection[column][row].position.x;
+                    collection[column][row].position.brick.a.y = collection[column][row].position.y;
+
+                    collection[column][row].position.brick.b.x = collection[column][row].position.x + collection[column][row].width;
+                    collection[column][row].position.brick.b.y = collection[column][row].position.y;
+
+                    collection[column][row].position.brick.c.x = collection[column][row].position.x + collection[column][row].width;
+                    collection[column][row].position.brick.c.y = collection[column][row].position.y + collection[column][row].height;
+
+                    collection[column][row].position.brick.d.x = collection[column][row].position.x;
+                    collection[column][row].position.brick.d.y = collection[column][row].position.y + collection[column][row].height;
                 }
             }
             return collection;
