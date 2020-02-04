@@ -1,0 +1,10 @@
+html {
+    font-size: 1px;
+}
+
+canvas {
+    background: #e2eea8;
+    display: block;
+    margin: 0 auto;
+}
+
