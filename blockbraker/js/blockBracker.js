@@ -167,12 +167,7 @@ let blockBreaker = {
                         let circle = {x: this.position.x, y: this.position.y, r: this.radius};
                         let collision = bounceTheBallFromTheBrick(rectangle, circle);
 
-                        if (collision.left) {
-                            console.log('collision.left: ', collision.left);
-                            lr = true;
-                        }
-                        if (collision.right) {
-                            console.log('collision.right: ', collision.right);
+                        if (collision.left || collision.right) {
                             lr = true;
                         }
                     }
