@@ -1,0 +1,15 @@
+.PSPDFKit-Toolbar {background-color: #FBFBFB;}
+.PSPDFKit-Tool-Button {border-color:transparent;}
+.PSPDFKit-Viewport {background-color: #D4D4D4;}
+.PSPDFKit-Sidebar {background-color: #FDFDFD;}
+.PSPDFKit-Sidebar-Dragger {right: -18px!important;width: 25px!important;background-color:#E8E8E8;}
+.PSPDFKit-Sidebar-DraggerHandle {width: 20px!important;background-color:transparent;border: none;}
+.PSPDFKit-Sidebar-DraggerHandle::before {width: 2px;margin-left: -4px;background-color:#90999D!important;}
+.PSPDFKit-Sidebar-DraggerHandle::after {width: 3px;margin-top: -10px;margin-left: 2px;transform: rotate(-45deg);-webkit-transform: rotate(-45deg);background-color: transparent;border: solid #90999D;border-width: 2px 0 0 2px;display: inline-block;padding: 3px;height: 3px;}
+.PSPDFKit-Sidebar-Bookmarks-Button-Add, .PSPDFKit-Sidebar-Bookmarks-Button-Save {background-color:#CF185E;border-color:#CF185E}
+.PSPDFKit-Sidebar-Bookmarks-Button-Add:hover, .PSPDFKit-Sidebar-Bookmarks-Button-Add:active, .PSPDFKit-Sidebar-Bookmarks-Button-Add:focus, .PSPDFKit-Sidebar-Bookmarks-Button-Save:hover {background-color:#CF185E;border-color:#CF185E;box-shadow:0 0 9px 4px rgba(207,24,94,0.17);}
+.PSPDFKit-Input-Dropdown-Item-selected .PSPDFKit-Toolbar-Button {background-color:#CF185E!important;border-color:#CF185E;}
+.PSPDFKit-Input-Dropdown-Item .PSPDFKit-Toolbar-Button:hover, .PSPDFKit-Input-Dropdown-Item .PSPDFKit-Toolbar-Button:focus {background-color:#CF185E!important;border-color:#CF185E!important;box-shadow:0 0 9px 4px rgba(207,24,94,0.17);}
+.PSPDFKit-Input-Dropdown-Item-selected .PSPDFKit-Toolbar-Button:hover {background-color:#CF185E;border-color:#CF185E;box-shadow:0 0 9px 4px rgba(207,24,94,0.17);}
+.PSPDFKit-Input-Dropdown-active button, .PSPDFKit-Input-Dropdown-active button:hover, .PSPDFKit-Input-Dropdown-active button:focus, .PSPDFKit-Input-Dropdown-active button:active {background-color:#CF185E!important;border-color:#CF185E;box-shadow:0 0 9px 4px rgba(207,24,94,0.17);}
+.PSPDFKit-Toolbar-Button-active, .PSPDFKit-Toolbar-Button-active:hover, .PSPDFKit-Toolbar-Button-active:focus, .PSPDFKit-Toolbar-Button-active:active {background-color:#CF185E!important;border-color:#CF185E;}

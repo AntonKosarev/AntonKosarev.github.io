@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <!-- Material-UI web-fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+    <title>React PWA</title>
+</head>
+<body>
+<h1>Internet connection is off, please go online.</h1>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./service-worker.js')
+                .then((reg) => console.log('Success: ', reg.scope))
+                .catch((err) => console.log('Error: ', err));
+        })
+    }
+</script>
+</body>
+</html>
