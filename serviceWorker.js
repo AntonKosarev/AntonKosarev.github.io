@@ -1,10 +1,13 @@
 const cache_name = 'version-1';
-const cached_urls = ['index.html', 'offline.html', '404.html'];
+const cached_urls = ['/index.html', '/offline.html', '/404.html'];
 
-self.addEventListener('install', function(event) {
+self.addEventListener('install', (event) => {
     event.waitUntil(
+
         caches.open(cache_name)
-            .then(function(cache) {
+            .then((cache) => {
+                console.log('Opened cache: ', cache_name);
+                console.log('Saving to cache: ', cached_urls);
                 return cache.addAll(cached_urls);
             })
     );
@@ -25,7 +28,7 @@ self.addEventListener('activate', function(event) {
 });
 
 self.addEventListener('fetch', function(event) {
-    let preCache = false;
+    const preCache = true;
     console.log('Fetch event for ', event.request.url);
     event.respondWith(
         caches.match(event.request).then(function(response) {
