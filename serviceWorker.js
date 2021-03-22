@@ -3,7 +3,6 @@ const cached_urls = ['/index.html', '/offline.html', '/404.html'];
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
-
         caches.open(cache_name)
             .then((cache) => {
                 console.log('Opened cache: ', cache_name);
